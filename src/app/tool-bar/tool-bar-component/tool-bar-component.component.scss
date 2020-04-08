@@ -1,0 +1,37 @@
+.tools {
+    width: 42px;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid #c9c9c9;
+}
+
+.tools canvas:hover {
+    cursor: pointer;
+}
+
+.pen, .blue, .green, .orange, .eraser {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+}
+
+.pen {
+    background: url('/assets/pencil.svg') no-repeat;
+    background-size: cover;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.eraser {
+    background: url('/assets/eraser.svg') no-repeat;
+    background-size: cover;
+}
