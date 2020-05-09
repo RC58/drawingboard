@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://rc58.github.io/drawingboard/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
