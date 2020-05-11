@@ -265,11 +265,15 @@ var DrawingBoardComponentComponent = /** @class */ (function () {
             var endDraw = function (e) {
                 svgBoard.removeEventListener('mousemove', drawLine);
                 svgBoard.removeEventListener('mouseup', endDraw);
+                svgBoard.removeEventListener('ontouchmove', drawLine);
+                svgBoard.removeEventListener('ontouchend', endDraw);
             };
             //check pen is seleted or not
             if (_this._commanService.penStatus) {
                 svgBoard.addEventListener('mousemove', drawLine);
                 svgBoard.addEventListener('mouseup', endDraw);
+                svgBoard.addEventListener('ontouchmove', drawLine);
+                svgBoard.addEventListener('ontouchend', endDraw);
             }
         });
     };

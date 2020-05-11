@@ -257,11 +257,15 @@ let DrawingBoardComponentComponent = class DrawingBoardComponentComponent {
             const endDraw = (e) => {
                 svgBoard.removeEventListener('mousemove', drawLine);
                 svgBoard.removeEventListener('mouseup', endDraw);
+                svgBoard.removeEventListener('ontouchmove', drawLine);
+                svgBoard.removeEventListener('ontouchend', endDraw);
             };
             //check pen is seleted or not
             if (this._commanService.penStatus) {
                 svgBoard.addEventListener('mousemove', drawLine);
                 svgBoard.addEventListener('mouseup', endDraw);
+                svgBoard.addEventListener('ontouchmove', drawLine);
+                svgBoard.addEventListener('ontouchend', endDraw);
             }
         });
     }
